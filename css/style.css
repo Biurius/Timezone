@@ -1,0 +1,15 @@
+.container {
+  max-width: 600px;
+  text-align: center;
+  display: block;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(37, 39, 89, 0.09);
+  margin: 100px auto 20px auto;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
