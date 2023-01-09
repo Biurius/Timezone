@@ -1,15 +1,61 @@
 .container {
   max-width: 600px;
-  text-align: center;
   display: block;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px rgba(37, 39, 89, 0.09);
   margin: 100px auto 20px auto;
+  background-color: rgb(233, 232, 235);
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-  color: blue;
+  color: rgb(70, 62, 62);
+  font-size: 40px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.clocklogo {
+  display: inline;
+  position: relative;
+  opacity: 0.6;
+  top: -40px;
+  right: -300px;
+}
+
+.searchbar {
+  border-radius: 6px;
+  border: #f7f2f7;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 600px;
+  font-family: monospace;
+}
+.cities {
+  background-color: #f7f2f7;
+  margin-top: 20px;
+  padding-top: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  color: rgb(29, 27, 27);
+}
+h2 {
+  margin-bottom: 0;
+  font-size: 30px;
+}
+.time {
+  text-align: right;
+  font-size: 27px;
+  font-weight: bolder;
+}
+.date {
+  font-family: monospace;
+  font-size: 15px;
+}
+footer {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: monospace;
+  font-size: 15px;
 }

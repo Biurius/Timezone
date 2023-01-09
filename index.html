@@ -15,14 +15,34 @@
   </head>
   <body>
     <div class="container">
-      <h1>World Clock</h1>
-      <footer>
-        This project was coded by Beatriz Santos and is open source on
-        <a href="https://github.com/Biurius/Timezone.git" target="_blank"
-          >Github</a
-        >
-      </footer>
+      <h1>
+        World Clock
+        <img src="images/clock.png" alt="logo" width="75" class="clocklogo" />
+      </h1>
+
+      <select name="city" id="search-bar" class="searchbar">
+        <option value="">Select a City</option>
+        <option value="">London</option>
+        <option value="">New York</option>
+        <option value="">Sydney</option>
+        <option value="">Mumbai</option>
+      </select>
+      <div class="cities">
+        <h2>London</h2>
+        <div class="date">August 14th of December</div>
+        <div class="time">12.45h</div>
+        <h2>New York</h2>
+        <div class="date">August 14th of December</div>
+        <div class="time">12.45h</div>
+      </div>
     </div>
+    <footer>
+      This project was coded by Beatriz Santos and is open source on
+      <a href="https://github.com/Biurius/Timezone.git" target="_blank"
+        >Github</a
+      >
+    </footer>
+
     <script src="javascript/index.js"></script>
   </body>
 </html>
