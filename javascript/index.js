@@ -16,10 +16,11 @@ function updatecurrentLocation() {
 
 function updateCity(event) {
   let cityTimezone = event.target.value;
-  let cityName = cityTimezone.replace("_", " ").split("/")[1];
-  let cityTime = moment.tz(cityTimezone);
-  let citiesElement = document.querySelector("#sydney");
-  citiesElement.innerHTML = `
+  if (event.target.value.length > 0) {
+    let cityName = cityTimezone.replace("_", " ").split("/")[1];
+    let cityTime = moment.tz(cityTimezone);
+    let citiesElement = document.querySelector("#sydney");
+    citiesElement.innerHTML = `
   <div class="city">
           <div>
             <h2>${cityName}</h2>
@@ -30,6 +31,10 @@ function updateCity(event) {
           )}</div>
         </div>
         </div>`;
+  } else {
+    let nuleCity = document.querySelector("#sydney");
+    nuleCity.innerHTML = "<h2>Please select a city for Comparison<h2>";
+  }
 }
 
 updatecurrentLocation();
