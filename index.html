@@ -10,7 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200&family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data-1970-2030.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+
     <title>Beatriz World Clock</title>
   </head>
   <body>
@@ -28,19 +31,19 @@
         <option value="">Mumbai</option>
       </select>
       <div class="citycontainer">
-        <div class="city">
+        <div class="city" id="current-city">
           <div>
-            <h2>London</h2>
-            <div class="date">August 14th of December</div>
+            <h2></h2>
+            <div class="date"></div>
           </div>
-          <div class="time">12:45:46 <small>AM</small></div>
+          <div class="time"></div>
         </div>
-        <div class="city">
+        <div class="city" id="sydney">
           <div>
             <h2>Sydney</h2>
-            <div class="date">August 14th of December</div>
+            <div class="date"></div>
           </div>
-          <div class="time">15:45:46 <small>PM</small></div>
+          <div class="time"></div>
         </div>
       </div>
     </div>
