@@ -10,17 +10,30 @@ function updatecurrentLocation() {
     "h:mm:ss [<small>]A[</small>]"
   );
   currenttimezone = moment.tz.guess();
-  currentcityCityElement.innerHTML = currenttimezone;
+  currentlocation = currenttimezone.replace("_", " ").split("/")[1];
+  currentcityCityElement.innerHTML = currentlocation;
+}
 
-  let sydneyElement = document.querySelector("#sydney");
-  let sydneyDate = sydneyElement.querySelector(".date");
-  let sydneyfunc = moment().tz("Australia/Sydney");
-  let sydneycity = sydneyElement.querySelector("h2");
-  let sydneyTime = sydneyElement.querySelector(".time");
-  sydneyDate.innerHTML = sydneyfunc.format("dddd Do of MMMM");
-  sydneyTime.innerHTML = sydneyfunc.format("h:mm:ss [<small>]A[</small>]");
-  sydneycity.innerHTML = "Australia/Sydney";
+function updateCity(event) {
+  let cityTimezone = event.target.value;
+  let cityName = cityTimezone.replace("_", " ").split("/")[1];
+  let cityTime = moment.tz(cityTimezone);
+  let citiesElement = document.querySelector("#sydney");
+  citiesElement.innerHTML = `
+  <div class="city">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityTime.format("dddd Do of MMMM")}</div>
+          </div>
+          <div class="time">${cityTime.format(
+            "h:mm:ss [<small>]A[</small>]"
+          )}</div>
+        </div>
+        </div>`;
 }
 
 updatecurrentLocation();
 setInterval(updatecurrentLocation, 1000);
+
+let citiesSelectElement = document.querySelector("#search-bar");
+citiesSelectElement.addEventListener("change", updateCity);
