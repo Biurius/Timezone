@@ -24,13 +24,13 @@
       </h1>
 
       <select name="city" id="search-bar" class="searchbar">
-        <option value="">Select City</option>
+        <option value="">Please Select a City</option>
         <option value="Europe/London">London</option>
         <option value="America/New_York">New York</option>
-        <option value="Australia/Sydney">Sydney</option>
+        <option value="Europe/Paris">Paris</option>
         <option value="Asia/Shanghai">Shanghai</option>
       </select>
-      <div class="citycontainer">
+      <div class="citycontainer" id="citycontainer">
         <div class="city" id="current-city">
           <div>
             <h2></h2>
@@ -45,6 +45,16 @@
           </div>
           <div class="time"></div>
         </div>
+        <div class="city" id="dubai">
+          <div>
+            <h2></h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+      </div>
+      <div class="goback">
+        <a href="index.html">Go back to all cities</a>
       </div>
     </div>
     <footer>

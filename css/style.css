@@ -63,3 +63,9 @@ footer {
   font-family: monospace;
   font-size: 15px;
 }
+.goback {
+  font-family: monospace;
+  margin-top: 10px;
+  font-size: 17px;
+  margin-left: 2px;
+}
